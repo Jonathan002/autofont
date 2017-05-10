@@ -1,0 +1,26 @@
+{
+  "name": "autofont",
+  "version": "0.0.1",
+  "description": "Makes adding fonts to your project as simple as drag and drop.",
+  "main": "fontplicity.js",
+  "scripts": {
+    "test": "bur"
+  },
+  "author": "Jonathan Fernandez",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "fontmachine": "^0.2.0"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^2.4.0",
+    "@angular/core": "^2.4.0",
+    "codelyzer": "^2.0.1",
+    "rxjs": "^5.0.1",
+    "tap": "^10.3.2",
+    "tslint": "^4.0.0",
+    "typescript": "^2.0.9",
+    "zone.js": "^0.7.2"
+  }
+}
