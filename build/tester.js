@@ -6,10 +6,7 @@ const cli = require('commander');
 const colors = require('colors');
 const fontmachine = require('fontmachine');
 const t = require('tap');
-// cli.version('0.1.7')
-// let inDir: String = "./fonts/";
 let inDir = "./fonts/";
-// console.log(fs.readdirSync(inDir));
 function getFileList(inDir) {
     let allFiles;
     let files = [];
@@ -32,23 +29,17 @@ function getFileList(inDir) {
     }
     return files;
 }
-getFileList(inDir);
 function getFontMetadata(fileList) {
-    let data = fs.readFileSync('./fonts/' + fileList[0]) || "";
+    // console.log(fileList);
     let fontMetadataArray = [];
-    let bur = [];
-    // for (let file in fileList) {
-    fontmachine.makeGlyphs({ font: data, filetype: '.ttf' }, function (err, font) {
-        // fontMetadataArray.push({
-        //     fontName: font.name, 
-        //     fontFamilyName: font.metadata.family_name, 
-        //     fontStyleName: font.metadata.style_name
-        // })
-        bur = [1, 2, 3];
-        console.log(bur);
-    });
-    Promise.resolve(bur != []).then(res => { console.log(res); });
-    // }
-    console.log('asyc?');
+    return Promise.all(fileList.map(function (fileName) {
+        let data = fs.readFileSync('./fonts/' + fileName) || "";
+        return new Promise(function (resolve, reject) {
+            fontmachine.makeGlyphs({ font: data, filetype: '.ttf' }, function (err, font) {
+                console.log('bur 2');
+            });
+        });
+    }));
 }
-getFontMetadata(getFileList(inDir));
+console.log('bur1');
+getFontMetadata(getFileList(inDir)).then(x => { console.log('bur 3'); });
