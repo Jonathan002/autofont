@@ -30,16 +30,30 @@ function getFileList(inDir) {
     return files;
 }
 function getFontMetadata(fileList) {
-    // console.log(fileList);
-    let fontMetadataArray = [];
     return Promise.all(fileList.map(function (fileName) {
         let data = fs.readFileSync('./fonts/' + fileName) || "";
         return new Promise(function (resolve, reject) {
-            fontmachine.makeGlyphs({ font: data, filetype: '.ttf' }, function (err, font) {
-                console.log('bur 2');
+            /* This method returns undefined so trying to resolve it does not give me the values */
+            fontmachine.makeGlyphs({ font: data, filetype: '.ttf' }, function (error, font) {
+                if (font != undefined) {
+                    console.log(font.name);
+                }
+                if (error) {
+                    reject(error);
+                }
+                else {
+                    /* Trying to get font data to be passed as data in array */
+                    resolve(font);
+                }
             });
         });
     }));
 }
-console.log('bur1');
-getFontMetadata(getFileList(inDir)).then(x => { console.log('bur 3'); });
+console.log('test 1');
+getFontMetadata(getFileList(inDir))
+    .then(value => {
+    console.log(value); // Success!
+}, reason => {
+    /* Fails if I don't resolve fontmachine directly */
+    console.log('test fail' + reason); // Error!
+});
