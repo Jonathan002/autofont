@@ -33,8 +33,13 @@ function getFontMetadata(fileList) {
     return Promise.all(fileList.map(function (fileName) {
         let data = fs.readFileSync('./fonts/' + fileName) || "";
         return new Promise(function (resolve, reject) {
-            /* This method returns undefined so trying to resolve it does not give me the values */
+            /*
+                If you do resolve(fontmachine.makeGlyphs()) the promise will be fuffiled.
+                However fontmachine method naturally returns undefined so trying to resolve it does not give me the values.
+                I'm only able to access font in the callback which I'm trying to resolve....
+            */
             fontmachine.makeGlyphs({ font: data, filetype: '.ttf' }, function (error, font) {
+                /* Logs font data to show it exist some time */
                 if (font != undefined) {
                     console.log(font.name);
                 }
@@ -42,18 +47,24 @@ function getFontMetadata(fileList) {
                     reject(error);
                 }
                 else {
-                    /* Trying to get font data to be passed as data in array */
+                    /* Trying to get this font data to be passed as data in array */
                     resolve(font);
                 }
             });
         });
     }));
 }
-console.log('test 1');
 getFontMetadata(getFileList(inDir))
     .then(value => {
     console.log(value); // Success!
 }, reason => {
-    /* Fails if I don't resolve fontmachine directly */
-    console.log('test fail' + reason); // Error!
+    /* Fails if resolve fontmachine directly */
+    console.log('test fail ' + reason); // Error!
 });
+// // Additional Testing of the Package Method
+// // Uncomment This to see return value of fontmachine
+// let data = fs.readFileSync('./fonts/' + (getFileList(inDir))[0]) || "";
+// console.log(fontmachine.makeGlyphs({font: data, filetype: '.ttf'}, function(error, font) {
+// }));
+// Promise.resolve(fontmachine.makeGlyphs({font: data, filetype: '.ttf'}, function(error, font) {
+// })).then(value => {console.log(value)}); 
