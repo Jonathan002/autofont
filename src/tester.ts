@@ -69,7 +69,7 @@ getFontMetadata(getFileList(inDir))
   console.log(value); // Success!
 }, reason => {
     /* Fails if resolve fontmachine directly */
-  console.log('test fail ' + reason); // Error!
+  console.log('Promise Rejected (from fontmachine callback err): ' + reason + '\n but wait for it... data will be logged soon..'); // Error!
 });
 
 // // Additional Testing of the Package Method
