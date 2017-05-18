@@ -9,6 +9,7 @@
   "author": "Jonathan Fernandez",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "fontmachine": "^0.2.0"

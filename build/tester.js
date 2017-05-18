@@ -4,8 +4,26 @@ const fs = require('fs');
 const path = require('path');
 const cli = require('commander');
 const colors = require('colors');
-const fontmachine = require('fontmachine');
+const fontmachine = require('./../lib/fontmachine');
 const t = require('tap');
+/* Taken from https://italonascimento.github.io/applying-a-timeout-to-your-promises/ */
+const promiseTimeout = function (ms, promise) {
+    // Create a promise that rejects in <ms> milliseconds
+    let timeout = new Promise((resolve, reject) => {
+        let id = setTimeout(() => {
+            clearTimeout(id);
+            console.log("timeout finished at " + ms + "ms but promise won't reject");
+            reject('Timed out in ' + ms + 'ms. - Reject Message');
+        }, ms);
+    });
+    // Returns a race between our timeout and the passed in promise
+    return Promise.race([
+        promise,
+        timeout
+    ]);
+};
+/* ---------------- Code ---------------------- */
+//--- var and funtions ----
 let inDir = "./fonts/";
 function getFileList(inDir) {
     let allFiles;
@@ -33,38 +51,35 @@ function getFontMetadata(fileList) {
     return Promise.all(fileList.map(function (fileName) {
         let data = fs.readFileSync('./fonts/' + fileName) || "";
         return new Promise(function (resolve, reject) {
-            /*
-                If you do resolve(fontmachine.makeGlyphs()) the promise will be fuffiled.
-                However fontmachine method naturally returns undefined so trying to resolve it does not give me the values.
-                I'm only able to access font in the callback which I'm trying to resolve....
-            */
             fontmachine.makeGlyphs({ font: data, filetype: '.ttf' }, function (error, font) {
-                /* Logs font data to show it exist some time */
+                /* Logs font data to show it exist after the 10 second wait.. */
                 if (font != undefined) {
                     console.log(font.name);
                 }
-                if (error) {
+                /* Takes 10s to resolve */
+                const prolongedPromise = function () {
+                    return new Promise((resolve, reject) => {
+                        resolve(font);
+                    });
+                };
+                /* Attempting to race promises to get reject to execute on timeout */
+                let promiseRace = promiseTimeout(2000, prolongedPromise());
+                promiseRace.then(response => {
+                    resolve(response);
+                }, error => {
                     reject(error);
-                }
-                else {
-                    /* Trying to get this font data to be passed as data in array */
-                    resolve(font);
-                }
+                }).catch(error => {
+                    reject(error);
+                });
             });
         });
     }));
 }
+//---execution----
 getFontMetadata(getFileList(inDir))
     .then(value => {
-    console.log(value); // Success!
+    console.log('..promise is RESOLVED!! : (' + ' Name:' + value[0].name + ' Fam:' + value[0].metadata.family_name + ' Style:' + value[0].metadata.style_name); // Promise Resolved!
 }, reason => {
     /* Fails if resolve fontmachine directly */
-    console.log('Promise Rejected (from fontmachine callback err): ' + reason + '\n but wait for it... data will be logged soon..'); // Error!
+    console.log('Promise REJECTED!! (hopefully from timeout): ' + reason + '\n'); // Promise Rejected!
 });
-// // Additional Testing of the Package Method
-// // Uncomment This to see return value of fontmachine
-// let data = fs.readFileSync('./fonts/' + (getFileList(inDir))[0]) || "";
-// console.log(fontmachine.makeGlyphs({font: data, filetype: '.ttf'}, function(error, font) {
-// }));
-// Promise.resolve(fontmachine.makeGlyphs({font: data, filetype: '.ttf'}, function(error, font) {
-// })).then(value => {console.log(value)}); 

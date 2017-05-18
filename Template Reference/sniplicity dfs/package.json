@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "sniplicity",
+        "scope": null,
+        "escapedName": "sniplicity",
+        "name": "sniplicity",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Jonathan002"
+    ]
+  ],
+  "_from": "sniplicity@latest",
+  "_id": "sniplicity@0.1.7",
+  "_inCache": true,
+  "_location": "/sniplicity",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "davebalmer",
+    "email": "dbalmerjr@gmail.com"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "sniplicity",
+    "scope": null,
+    "escapedName": "sniplicity",
+    "name": "sniplicity",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/sniplicity/-/sniplicity-0.1.7.tgz",
+  "_shasum": "0105b2de983efcc0598bf901c159a0bed333f408",
+  "_shrinkwrap": null,
+  "_spec": "sniplicity",
+  "_where": "/Users/Jonathan002",
+  "author": {
+    "name": "Dave Balmer",
+    "email": "dbalmerjr@gmail.com",
+    "url": "http://blog.davebalmer.com"
+  },
+  "bin": {
+    "sniplicity": "./bin/sniplicity"
+  },
+  "bugs": {
+    "url": "https://github.com/davebalmer/sniplicity/issues"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0"
+  },
+  "description": "Simple snippet-based static HTML build system that lets you reuse code snippets with simple variables and conditional inclusion.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "0105b2de983efcc0598bf901c159a0bed333f408",
+    "tarball": "https://registry.npmjs.org/sniplicity/-/sniplicity-0.1.7.tgz"
+  },
+  "gitHead": "575c8b26107fa0274e6daf595a254db774d6d870",
+  "homepage": "https://github.com/davebalmer/sniplicity",
+  "keywords": [
+    "html",
+    "template",
+    "build",
+    "make",
+    "parse",
+    "watch"
+  ],
+  "license": "MIT",
+  "main": "./lib/sniplicity.js",
+  "maintainers": [
+    {
+      "name": "davebalmer",
+      "email": "dbalmerjr@gmail.com"
+    }
+  ],
+  "name": "sniplicity",
+  "optionalDependencies": {},
+  "preferGlobal": true,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davebalmer/sniplicity.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.7"
+}

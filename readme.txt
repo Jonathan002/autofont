@@ -1,2 +1,0 @@
-- Use node ./build/tester.js to run the file.
-- Run tsc -w to compile typescript.
