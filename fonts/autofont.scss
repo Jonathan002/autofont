@@ -1,0 +1,59 @@
+// ==================================
+// ==== Autofont Master Font File ===
+// ==================================
+// ---------------------------------------------------------------------
+// --- Auto added these fonts. Font-Style must manually be set here  ---
+// ---------------------------------------------------------------------
+
+
+// ---Montserrat---
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 100;
+   src: url("./Montserrat-ExtraLight.ttf") format("ttf");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 200;
+   src: url("./Montserrat-Light.ttf") format("ttf"), url("./Montserrat-Thin.ttf") format("ttf");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 400;
+   src: url("./Montserrat-BlackItalic.ttf") format("ttf"), url("./Montserrat-BoldItalic.ttf") format("ttf"), url("./Montserrat-ExtraBoldItalic.ttf") format("ttf"), url("./Montserrat-ExtraLightItalic.ttf") format("ttf"), url("./Montserrat-Italic.ttf") format("ttf"), url("./Montserrat-LightItalic.ttf") format("ttf"), url("./Montserrat-MediumItalic.ttf") format("ttf"), url("./Montserrat-Regular.ttf") format("ttf"), url("./Montserrat-SemiBoldItalic.ttf") format("ttf"), url("./Montserrat-ThinItalic.ttf") format("ttf");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 500;
+   src: url("./Montserrat-Medium.ttf") format("ttf");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 600;
+   src: url("./Montserrat-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 700;
+   src: url("./Montserrat-Bold.ttf") format("ttf");
+}
+
+@font-face {
+   font-family: "Montserrat";
+   font-style: normal;
+   font-weight: 800;
+   src: url("./Montserrat-Black.ttf") format("ttf"), url("./Montserrat-ExtraBold.ttf") format("ttf");
+}
+

@@ -1,9 +1,9 @@
 # Instructions
 
-- Use the following command to run the file.
+- Use the following command to run the app file.
 
 ```sh
-node ./build/tester.js
+node ./build/src/app.js
 ```
 - Run typescript watcher to compile typescript.
 
@@ -11,7 +11,8 @@ node ./build/tester.js
 tsc -w
 ```
 
-## Notes
-The package fontmachine has been copied to lib for 10 second delay on promise test. 
+Install this globally by running: (with bash inside this project root folder)
 
-(keep npm fontmachine in package.json for dependencies)
+```
+npm install . -g
+```

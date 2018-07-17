@@ -1,0 +1,265 @@
+{
+    "autofont": [
+        {
+            "font-family-name": "icomoon",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "icomoon",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./icomoon.ttf\") format(\"ttf\")",
+                        "url(\"./icomoon.woff\") format(\"woff\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "SFNS Display",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "SFNS Display",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./sfns-display-regular.ttf\") format(\"ttf\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "Montserrat",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat",
+                    "font-style": "normal",
+                    "font-weight": 100,
+                    "src": [
+                        "url(\"./Montserrat-ExtraLight.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat",
+                    "font-style": "normal",
+                    "font-weight": 200,
+                    "src": [
+                        "url(\"./Montserrat-Light.otf\") format(\"otf\")",
+                        "url(\"./Montserrat-Thin.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./Montserrat-Regular.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat",
+                    "font-style": "normal",
+                    "font-weight": 500,
+                    "src": [
+                        "url(\"./Montserrat-Medium.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat",
+                    "font-style": "normal",
+                    "font-weight": 600,
+                    "src": [
+                        "url(\"./Montserrat-SemiBold.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat",
+                    "font-style": "normal",
+                    "font-weight": 800,
+                    "src": [
+                        "url(\"./Montserrat-ExtraBold.otf\") format(\"otf\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "Montserrat Alternates",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 100,
+                    "src": [
+                        "url(\"./MontserratAlternates-ExtraLight.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 200,
+                    "src": [
+                        "url(\"./MontserratAlternates-Light.otf\") format(\"otf\")",
+                        "url(\"./MontserratAlternates-Thin.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./MontserratAlternates-Regular.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 500,
+                    "src": [
+                        "url(\"./MontserratAlternates-Medium.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 600,
+                    "src": [
+                        "url(\"./MontserratAlternates-SemiBold.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 700,
+                    "src": [
+                        "url(\"./MontserratAlternates-Bold.otf\") format(\"otf\")"
+                    ]
+                },
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Montserrat Alternates",
+                    "font-style": "normal",
+                    "font-weight": 800,
+                    "src": [
+                        "url(\"./MontserratAlternates-Black.otf\") format(\"otf\")",
+                        "url(\"./MontserratAlternates-ExtraBold.otf\") format(\"otf\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "Roboto",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Roboto",
+                    "font-style": "normal",
+                    "font-weight": 700,
+                    "src": [
+                        "url(\"./roboto-bold.ttf\") format(\"ttf\")",
+                        "url(\"./roboto-bold.woff\") format(\"woff\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "Zapfino",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Zapfino",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./Zapfino.ttf\") format(\"ttf\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "Roboto Light",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Roboto Light",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./roboto-light.ttf\") format(\"ttf\")",
+                        "url(\"./roboto-light.woff\") format(\"woff\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "Roboto Medium",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Roboto Medium",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./roboto-medium.ttf\") format(\"ttf\")"
+                    ]
+                }
+            ]
+        }
+    ],
+    "fixme": [
+        {
+            "font-family-name": "icomoon",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "icomoon",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./icomoon.eot\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "icomoon",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "icomoon",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./icomoon.svg\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "roboto-bold",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "roboto-bold",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./roboto-bold.woff2\")"
+                    ]
+                }
+            ]
+        }
+    ]
+}

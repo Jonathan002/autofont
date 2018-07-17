@@ -1,0 +1,33 @@
+//Events
+
+//Task to do on Scss save...
+
+
+
+// TaskScssSaveHandler = (TaskScssSaveHandler() {
+    //check scss
+    //readScss
+    //parse hmmmmmmmmmmmmmmmmmmmm
+    //compare
+    // if valid save update font face json
+}())
+
+​
+
+//Task to do on new File / removing of Files
+// TaskFSHandler = (TaskFSHandler() {
+    //Check for FSChange
+    //
+}())
+
+//new File
+// rm File
+
+
+
+// Updating Saved Json
+// Compare new Json with Saved Json
+// Remove Fonts from Saved Json
+// Add Fonts from Saved Json
+
+// Rewrite Scss File with Saved Json

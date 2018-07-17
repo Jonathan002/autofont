@@ -1,27 +1,45 @@
 {
   "name": "autofont",
-  "version": "0.0.1",
-  "description": "Makes adding fonts to your project as simple as drag and drop.",
-  "main": "fontplicity.js",
-  "scripts": {
-    "test": "bur"
+  "version": "0.1.10",
+  "description": "Automatically reads all font files in a folder and creates a autofont.scss file containing @font-face data. Can run in watch mode and automatically update the autofont.scss from addition and removal of fonts in the folder.",
+  "main": "./build/src/app.js",
+  "bin": {
+    "autofont": "./bin/autofont.js"
   },
-  "author": "Jonathan Fernandez",
-  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "colors": "^1.1.2",
-    "commander": "^2.9.0",
+    "commander": "^2.10.0",
     "fontmachine": "^0.2.0"
   },
   "devDependencies": {
-    "@angular/compiler": "^2.4.0",
-    "@angular/core": "^2.4.0",
-    "codelyzer": "^2.0.1",
-    "rxjs": "^5.0.1",
-    "tap": "^10.3.2",
-    "tslint": "^4.0.0",
-    "typescript": "^2.0.9",
-    "zone.js": "^0.7.2"
-  }
+    "@types/es6-promise": "^3.3.0",
+    "@types/node": "^10.5.2",
+    "tslint": "^4.5.1",
+    "typescript": "^2.4.1"
+  },
+  "scripts": {
+    "test": "node ./build/src/app.js",
+    "build": "tsc",
+    "watcher": "npm run build -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan002/autofont.git"
+  },
+  "keywords": [
+    "fonts",
+    "@font-face",
+    "scss",
+    "watcher",
+    "auto",
+    "npm"
+  ],
+  "author": "Jonathan Fernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jonathan002/autofont/issues"
+  },
+  "homepage": "https://github.com/Jonathan002/autofont#readme"
 }
