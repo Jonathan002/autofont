@@ -58,7 +58,7 @@ If you have some of these dependencies listed below already installed, and don't
 
 ### Support Me
 
-If you appreciate this package and feel like being nice, you can support me on [Patreon](https://www.patreon.com/bePatron?c=1376218&rid=2627828). The support helps me maintain projects like this, as well as improve the my dev-documentation website [Summary Docs](www.summarydocs.com).
+If you appreciate this package and feel like being nice, you can support me on [Patreon](https://www.patreon.com/bePatron?c=1376218&rid=2627828). The support helps me maintain projects like this, as well as improve the my dev-documentation website [Summary Docs](https://www.summarydocs.com).
 
 ---
 

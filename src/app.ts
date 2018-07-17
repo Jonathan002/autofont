@@ -89,7 +89,7 @@ welcomeMessage =
 
 // --------------------------- Cli Optionts ---------------------------
 cli
-	.version('1.0.4', '-v, --version')
+	.version('1.0.5', '-v, --version')
 	.arguments('<path_to_fonts>')
 	.action(function (path_to_fonts) {
 		source = fixdir(path_to_fonts);
