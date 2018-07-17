@@ -8,14 +8,13 @@ It is a cli watcher that will automatically convert all font files of your speci
 
 Note: If you have autofont already installed globally, uninstall it first before installing again to make sure the dependencies install correctly.
 
-1. Install via npm:
-
+#### 1. Install via npm:
 
 ```
-npm install . -g
+npm install autofont -g
 ```
 
-2. Run the Autofont Binary and add a input path to the directory containing your fonts. 
+#### 2. Run the Autofont Binary and add a input path to the directory containing your fonts. 
 
 Note: 
 - The font directory must be flat and can't have font files nested within other directories.
@@ -25,7 +24,11 @@ Note:
 autofont /path/to/my/font/files
 ```
 
-3. Expect a `autofont.scss` to be available in the chosen directory.
+#### 3. Expect a `autofont.scss` to be available in the chosen directory.
+
+`/path/to/my/font/files/autofont.scss` <---
+
+
 
 ### Advance Usage
 - You can specify watch mode with `-w`
