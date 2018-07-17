@@ -1,6 +1,6 @@
 {
   "name": "autofont",
-  "version": "0.1.10",
+  "version": "1.0.4",
   "description": "Automatically reads all font files in a folder and creates a autofont.scss file containing @font-face data. Can run in watch mode and automatically update the autofont.scss from addition and removal of fonts in the folder.",
   "main": "./build/src/app.js",
   "bin": {
@@ -20,7 +20,7 @@
     "typescript": "^2.4.1"
   },
   "scripts": {
-    "test": "node ./build/src/app.js",
+    "test": "npm run build && node ./build/src/app.js",
     "build": "tsc",
     "watcher": "npm run build -- -w"
   },

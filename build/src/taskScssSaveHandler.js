@@ -43,13 +43,13 @@ class TaskScssSaveHandler extends EventEmitter {
     statusMessages(request, dynamicMessages) {
         switch (request) {
             case 'rejection':
-                return ('// --------------- Scss Rejection! ---------------------\n' +
+                return ('\n// --------------- Scss Rejection! ---------------------\n' +
                     '//' + dynamicMessages[0] + '\n' +
                     '//  ------------------------------------------------------ \n' +
                     '//  - ' + dynamicMessages[1] + '\n' +
                     '// --------------------------------------------------------\n');
             case 'rejection_unableToParse':
-                return ('// --------------- Scss Rejection! ---------------------\n' +
+                return ('\n// --------------- Scss Rejection! ---------------------\n' +
                     '//               Unable to Parse Scss                    \n' +
                     '//  ------------------------------------------------------ \n' +
                     '//  - Unable to parse your autofont.scss. This may be due to \n' +
@@ -60,7 +60,7 @@ class TaskScssSaveHandler extends EventEmitter {
                     '//     ---> ' + dynamicMessages[1] + 'autofont-rejected.scss   \n' +
                     '// --------------------------------------------------------\n');
             case 'rejection_illegalProp':
-                return ('// ------------- Scss Rejection! ---------------------------\n' +
+                return ('\n// ------------- Scss Rejection! ---------------------------\n' +
                     '//          Illegal Font Property Changed                   \n' +
                     '//  ------------------------------------------------------ \n' +
                     '//  - Illegal Font Property Found:                         \n' +
@@ -90,20 +90,20 @@ class TaskScssSaveHandler extends EventEmitter {
                     '//     }                                                               \n' +
                     '// --------------------------------------------------------\n');
             case 'sucess_savingAutofont':
-                return ('// ------------------ Sucess! -----------------------------\n' +
+                return ('\n// ------------------ Sucess! -----------------------------\n' +
                     '//         Successfully Saved Valid Scss                   \n' +
                     '//  ------------------------------------------------------ \n' +
                     '//  - Changes saved to your autofont Scss at:               \n' +
                     '//     ---> ' + dynamicMessages + '.autofont                \n' +
                     '// --------------------------------------------------------\n');
             case 'update':
-                return ('// --------------- Autofont Update! ---------------------\n' +
+                return ('\n// --------------- Autofont Update! ---------------------\n' +
                     '//' + dynamicMessages[0] + '\n' +
                     '//  ------------------------------------------------------ \n' +
                     '//  - ' + dynamicMessages[1] + '\n' +
                     '// --------------------------------------------------------\n');
             case 'update_revertScssFile':
-                return ('// --------------- Autofont Update! ---------------------\n' +
+                return ('\n// --------------- Autofont Update! ---------------------\n' +
                     '//      Attempting to Revert Autofont Scss File.           \n' +
                     '//  ------------------------------------------------------ \n' +
                     '//  - If changes are not visible please close and reopen     \n' +
@@ -122,11 +122,11 @@ class TaskScssSaveHandler extends EventEmitter {
         let scssString = this.tmVar['M_readScss'];
         //Need to verify if file exist so we can emit a rename count..
         try {
-            fs.readFileSync(this.tmVar['inDir'] + 'Autofont-Rejected.scss', 'utf-8');
-            fs.writeFileSync(this.tmVar['inDir'] + 'Autofont-Rejected.scss', scssString);
+            fs.readFileSync(this.tmVar['inDir'] + 'autofont-rejected.scss', 'utf-8');
+            fs.writeFileSync(this.tmVar['inDir'] + 'autofont-rejected.scss', scssString);
         }
         catch (e) {
-            fs.writeFileSync(this.tmVar['inDir'] + 'Autofont-Rejected.scss', scssString);
+            fs.writeFileSync(this.tmVar['inDir'] + 'autofont-rejected.scss', scssString);
             this.emit('addCount');
         }
         // Revert Message: App will run TaskFSHandler() after to implement the revert

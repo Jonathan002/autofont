@@ -1,35 +1,6 @@
 {
     "autofont": [
         {
-            "font-family-name": "icomoon",
-            "font-scss": [
-                {
-                    "scss-rule": "@font-face",
-                    "font-family": "icomoon",
-                    "font-style": "normal",
-                    "font-weight": 400,
-                    "src": [
-                        "url(\"./icomoon.ttf\") format(\"ttf\")",
-                        "url(\"./icomoon.woff\") format(\"woff\")"
-                    ]
-                }
-            ]
-        },
-        {
-            "font-family-name": "SFNS Display",
-            "font-scss": [
-                {
-                    "scss-rule": "@font-face",
-                    "font-family": "SFNS Display",
-                    "font-style": "normal",
-                    "font-weight": 400,
-                    "src": [
-                        "url(\"./sfns-display-regular.ttf\") format(\"ttf\")"
-                    ]
-                }
-            ]
-        },
-        {
             "font-family-name": "Montserrat",
             "font-scss": [
                 {
@@ -160,6 +131,35 @@
             ]
         },
         {
+            "font-family-name": "Zapfino",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "Zapfino",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./Zapfino.ttf\") format(\"ttf\")"
+                    ]
+                }
+            ]
+        },
+        {
+            "font-family-name": "icomoon",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "icomoon",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./icomoon.ttf\") format(\"ttf\")",
+                        "url(\"./icomoon.woff\") format(\"woff\")"
+                    ]
+                }
+            ]
+        },
+        {
             "font-family-name": "Roboto",
             "font-scss": [
                 {
@@ -170,20 +170,6 @@
                     "src": [
                         "url(\"./roboto-bold.ttf\") format(\"ttf\")",
                         "url(\"./roboto-bold.woff\") format(\"woff\")"
-                    ]
-                }
-            ]
-        },
-        {
-            "font-family-name": "Zapfino",
-            "font-scss": [
-                {
-                    "scss-rule": "@font-face",
-                    "font-family": "Zapfino",
-                    "font-style": "normal",
-                    "font-weight": 400,
-                    "src": [
-                        "url(\"./Zapfino.ttf\") format(\"ttf\")"
                     ]
                 }
             ]
@@ -216,6 +202,20 @@
                     ]
                 }
             ]
+        },
+        {
+            "font-family-name": "SFNS Display",
+            "font-scss": [
+                {
+                    "scss-rule": "@font-face",
+                    "font-family": "SFNS Display",
+                    "font-style": "normal",
+                    "font-weight": 400,
+                    "src": [
+                        "url(\"./sfns-display-regular.ttf\") format(\"ttf\")"
+                    ]
+                }
+            ]
         }
     ],
     "fixme": [
@@ -226,7 +226,7 @@
                     "scss-rule": "@font-face",
                     "font-family": "icomoon",
                     "font-style": "normal",
-                    "font-weight": 400,
+                    "font-weight": 900,
                     "src": [
                         "url(\"./icomoon.eot\")"
                     ]

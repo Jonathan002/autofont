@@ -89,9 +89,13 @@ welcomeMessage =
 
 // --------------------------- Cli Optionts ---------------------------
 cli
-	.version('0.1.0')
-	.usage('-i in -o out -w')
-	.option('-i, --in <path>', 'source directory')
+	.version('1.0.4', '-v, --version')
+	.arguments('<path_to_fonts>')
+	.action(function (path_to_fonts) {
+		source = fixdir(path_to_fonts);
+	})
+	// Below (.usage and .option) is just extra output that gets used when user types --help
+	.usage('<path_to_fonts>')
 	.option('-w, --watch', 'keep watching the input directory')
 	.on('--help', function(){
 		console.log(welcomeMessage);
@@ -101,7 +105,6 @@ cli
 
 taskFSHandler = new TaskFSHandler
 taskScssSaveHandler = new TaskScssSaveHandler
-source = fixdir(cli.in);
 watch = cli.watch || false;
 // --- testing ---
 // watch = true;

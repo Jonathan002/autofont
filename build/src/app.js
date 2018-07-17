@@ -65,9 +65,12 @@ welcomeMessage =
         '// --------------------------------------------------------\n';
 // --------------------------- Cli Optionts ---------------------------
 cli
-    .version('0.1.0')
-    .usage('-i in -o out -w')
-    .option('-i, --in <path>', 'source directory')
+    .version('1.0.5', '-v, --version')
+    .arguments('<path_to_fonts>')
+    .action(function (path_to_fonts) {
+    source = fixdir(path_to_fonts);
+})
+    .usage('<path_to_fonts>')
     .option('-w, --watch', 'keep watching the input directory')
     .on('--help', function () {
     console.log(welcomeMessage);
@@ -76,7 +79,6 @@ cli
 // --------------------------------------------------------------------
 taskFSHandler = new taskFSHandler_1.TaskFSHandler;
 taskScssSaveHandler = new taskScssSaveHandler_1.TaskScssSaveHandler;
-source = fixdir(cli.in);
 watch = cli.watch || false;
 // --- testing ---
 // watch = true;

@@ -28,13 +28,13 @@ import * as u from './../lib/utility';
 export class TaskFSHandler extends EventEmitter {
     //Properties
     satusMessages = {
-        'stop_updatingFontFolder': ('// -------------------- WARNING! ---------------------------\n' +
+        'stop_updatingFontFolder': ('\n// -------------------- WARNING! ---------------------------\n' +
                                     '//                 UPDATING FONT FOLDER                    \n' +
                                     '//  ------------------------------------------------------ \n' +
                                     '//  - Do not edit/move files until this process has been   \n' +
                                     '//    completed.                                           \n' +
                                     '// --------------------------------------------------------\n'),
-        'go_updateFinished': ('// -------------------- CLEAR! ---------------------------\n' +
+        'go_updateFinished': ('\n// -------------------- CLEAR! ---------------------------\n' +
                             '//              UPDATE SUCESSFULLY FINISHED                \n' +
                             '//  ------------------------------------------------------ \n' +
                             '//  - You may now continue to add Font Files and Edit      \n' +
@@ -137,7 +137,8 @@ export class TaskFSHandler extends EventEmitter {
                 x['weight'] = 900;
             } else {
                 x['weight'] = 400;
-                console.log("Couldn't match font metadata's style. It had been defaulted to '400'");
+                console.log("- Couldn't match font metadata's style for font file '" + x.filename + "'." +
+                            "\n     It had been defaulted to '400' under the @font-face font-family: '" + x.metadata.family_name + "'.");
                 //move it to fixme scss
             }
             return x;
@@ -169,7 +170,9 @@ export class TaskFSHandler extends EventEmitter {
                 noMetaFileNames.push(fileList[i]);
             }
         }
-        console.log('Files that could not be Autofonted ' + noMetaFileNames);
+        if (noMetaFileNames.length) {
+            console.log('Files that could not be Autofonted:\n- ' + noMetaFileNames.join('\n- '));
+        }
         return noMetaFileNames;
     }
 
@@ -448,7 +451,6 @@ export class TaskFSHandler extends EventEmitter {
     writeAutofontFile(inDir, autofontJson) {
         try {
             fs.writeFileSync(inDir + '.autofont', JSON.stringify(autofontJson, null, 4));
-            console.log('fs Sync Write Autofont');
             return true;
         } catch(e) {
             throw Error('Unable to write .autofont FS Error: ' + e);
@@ -515,7 +517,6 @@ export class TaskFSHandler extends EventEmitter {
         // Need to verify file exist to know if we are calling rename or change to watcher via try catche error.
         try {
             fs.writeFileSync(inDir + 'autofont.scss', MT_createFontFaceString, 'utf8');
-            console.log('fs Sync Write Scss -> Rename/Change');
             this.emit('addCount')
             return true;
         } catch(e) {

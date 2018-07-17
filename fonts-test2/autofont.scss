@@ -9,7 +9,7 @@
 @font-face {
    font-family: "icomoon";
    font-style: normal;
-   font-weight: 400;
+   font-weight: 900;
    src: url("./icomoon.eot");
 }
 
@@ -34,24 +34,6 @@
 // --- Auto added these fonts. Font-Style must manually be set here  ---
 // ---------------------------------------------------------------------
 
-
-// ---icomoon---
-
-@font-face {
-   font-family: "icomoon";
-   font-style: normal;
-   font-weight: 400;
-   src: url("./icomoon.ttf") format("ttf"), url("./icomoon.woff") format("woff");
-}
-
-// ---SFNS Display---
-
-@font-face {
-   font-family: "SFNS Display";
-   font-style: normal;
-   font-weight: 400;
-   src: url("./sfns-display-regular.ttf") format("ttf");
-}
 
 // ---Montserrat---
 
@@ -148,15 +130,6 @@
    src: url("./MontserratAlternates-Black.otf") format("otf"), url("./MontserratAlternates-ExtraBold.otf") format("otf");
 }
 
-// ---Roboto---
-
-@font-face {
-   font-family: "Roboto";
-   font-style: normal;
-   font-weight: 700;
-   src: url("./roboto-bold.ttf") format("ttf"), url("./roboto-bold.woff") format("woff");
-}
-
 // ---Zapfino---
 
 @font-face {
@@ -164,6 +137,24 @@
    font-style: normal;
    font-weight: 400;
    src: url("./Zapfino.ttf") format("ttf");
+}
+
+// ---icomoon---
+
+@font-face {
+   font-family: "icomoon";
+   font-style: normal;
+   font-weight: 400;
+   src: url("./icomoon.ttf") format("ttf"), url("./icomoon.woff") format("woff");
+}
+
+// ---Roboto---
+
+@font-face {
+   font-family: "Roboto";
+   font-style: normal;
+   font-weight: 700;
+   src: url("./roboto-bold.ttf") format("ttf"), url("./roboto-bold.woff") format("woff");
 }
 
 // ---Roboto Light---
@@ -182,5 +173,14 @@
    font-style: normal;
    font-weight: 400;
    src: url("./roboto-medium.ttf") format("ttf");
+}
+
+// ---SFNS Display---
+
+@font-face {
+   font-family: "SFNS Display";
+   font-style: normal;
+   font-weight: 400;
+   src: url("./sfns-display-regular.ttf") format("ttf");
 }
 
